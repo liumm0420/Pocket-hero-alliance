@@ -1,0 +1,7 @@
+vux组件(同时会初始化vue项目)安装步骤
+1.全局环境中安装webpack 和 vue-cli
+2.安装命令: 使用 webpack1版本, webpack2版本不稳定, 不成熟
+   vue init airyland/vux2#webpack1 projectPath\
+3.在项目中打开cmd,安装所有的依赖模块
+    npm install
+    //先将项目中的路由内容分离

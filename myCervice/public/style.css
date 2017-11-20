@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background: #eee;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6, p{
+    margin:0;
+}
+
+header{
+   
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+     margin-top: 15px;
+}
+header> div{
+    float: left;
+}
+header nav{
+    float: right;
+}
+header nav ul li {
+    float: left;
+}
+header nav ul{
+    overflow: hidden;
+}
+main{
+    width: 1000px;
+    margin: 0 auto;
+}
+main ul{
+    overflow: hidden;
+}
+main ul li{
+float: left;
+width: 200px;
+height: 320px;
+border: solid 1px rebeccapurple;
+text-align: center;
+margin: 25px 25px;
+background: #fff;
+}
+main ul li img{
+    width: 100px;
+    height: 100px;
+}
+.shopping{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.shopping ul li{
+    border: solid 1px rebeccapurple;
+    margin-top: 10px;
+    height: 106px;
+    
+     
+}
+.shopping ul li span,.shopping ul li a{
+    position:relative;
+    top: -45px;
+}
+.shopping ul li a{
+    margin-left: 50px;
+}
+.shopping ul li img{
+    width: 100px;
+    height: 100px;
+}
+a{
+    color: white;
+    background: red;
+    padding: 1px 6px;
+    margin-top: 5px;
+    transition: all .3s;
+}
+a:hover{
+    color: red;
+    background: white;
+}
+.shopping ul li a.shixiao{
+    top: 0;
+}
+.shopping ul li h2.shixiao{
+    position: relative;
+    top: 36px;
+
+}

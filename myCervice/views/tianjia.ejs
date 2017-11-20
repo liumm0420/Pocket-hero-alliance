@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/jquery.js"></script>
+</head>
+<body>
+        <form action="/tianjia" class="tianjia">
+            名称 :  <input type="text" name="name" required><br> 
+            价格 : <input type="text" name="price" required > <br>
+            描述 : <input type="text" name="describe" required> <br>
+            图片       <input class="photo" type="file" name="photo"> <br>
+            击杀 : <input type="number" name="jisha" required> <br>
+            生存 : <input type="number" name="shengcun" required> <br>
+            助攻 : <input type="number" name="zhugong" required> <br>
+            物理 : <input type="number" name="wuli" required> <br>
+            魔法 : <input type="number" name="mofa" required> <br>
+            防御 : <input type="number" name="fangyu" required> <br>
+                    <!-- <input class="photos" type="text" name="photos" > -->
+                   <button type="submit"> 添加 </button>
+           
+        
+        </form>
+    
+</body>
+<script>
+    $('.tianjia').submit(function (ev) {
+        ev.preventDefault();
+        // $(ev.target).children('input.photos').val() = $(ev.target).children('input.photo').val().substr(12)
+        // console.log($(ev.target).children('input.photo').val().substr(12))
+        var data = $(this).serialize();
+        // 创建一个表单的实例化对象, 包含表单中的所有数据,
+        var data = new FormData(this);
+        // data.photo = $(ev.target).children('input.photo').val().substr(12)
+        console.log(data);
+        $.post({
+            url: '/tianjia',
+            data: data,
+            contentType: false,   //编码类型,默认的编码类型urlencode,
+            // 当设置为false时,发送请求以当前的编码类型为主
+            processData: false, //默认情况下,数据发送至服务器时,会自动进行数据转换
+            // 当设置为false时,会以当前的数据格式发送至服务器
+
+            success: function (resData) {
+                console.log(resData);
+                if (resData.error == 1) {
+                    alert(resData.message)
+                    location.href = '/'
+                } else {
+                    alert(resData.message)
+                    location.href = '/'
+                }
+            }
+        })
+    })
+</script>
+</html>

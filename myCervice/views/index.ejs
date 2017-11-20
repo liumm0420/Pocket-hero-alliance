@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+        <main>
+    <a href="/tianjia">添加商品</a>
+    <!-- <%= data %> -->
+
+    <ul>
+        <% data.forEach(function(datas){ %>
+            <li>
+                <img src="/uploads/<%= datas.photo.filename %>" alt="">
+                <p>名称 :
+                    <%= datas.name%>
+                </p>
+                <p>价格 :
+                    <%= datas.price%>
+                </p>
+                <p>描述 :
+                    <%= datas.describe%>
+                </p>
+                <p>时间 :
+                    <%= datas.time.minute%>
+                </p>
+                <p>
+                    
+                </p>
+                
+                    <a href="/goodsShanchu/<%= datas.photo.filename %>">删除</a>
+                    <a href="/goodsXiugai/<%=datas.times%>">修改</a>
+                    
+            </li>
+            <% }) %>
+    </ul>
+    </main>
+</body>
+<script>
+    
+</script>
+</html>
